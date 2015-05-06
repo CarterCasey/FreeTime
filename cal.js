@@ -1,5 +1,12 @@
 /* global gapi */
 
+var TYPES = ["owner", "writer", "reader", "freeBusyReader"];
+
+var CAL_ACCESS = {"owner": "Calendars you own",
+				 "writer": "Calendars you can update",
+				 "reader": "Calendars you can see",
+				 "freeBusyReader": "Calendars that show when people are busy"};
+
 /**
  * Defines starting point for code body from auth.js.
  */
@@ -7,10 +14,18 @@ function start() {
 	var list_req = gapi.client.calendar.calendarList.list({});
 	
 	list_req.execute(function (res) {
-		console.log(res.items);
-		for (i in res.items) {
-			
-			$("#calendar-list paper-shadow").append(makeCalItem(res.items[i]));
+		var paritioned = partitionCalList(res.items);
+
+		var cal_types = TYPES.filter(function (t) { return t in paritioned; });
+
+		for (i in cal_types) { var type = cal_types[i];
+			var cals = "\n\t\t<h3>" + CAL_ACCESS[type]
+					 + "</h3>\n\t\t<paper-shadow>";
+			for (j in paritioned[type]) { var cal = paritioned[type][j];
+				cals += makeCalItem(cal);
+			}
+			cals += "</paper-shadow>";
+			$("#calendar-list").append(cals);
 		}
 	});
 }
@@ -25,7 +40,7 @@ function partitionCalList(cal_list) {
 	for (i in cal_list) {
 		var r = cal_list[i].accessRole;
 		if (r in roles) {
-			roles[r].append(cal_list[i]);
+			roles[r].push(cal_list[i]);
 		} else {
 			roles[r] = [cal_list[i]];
 		}
