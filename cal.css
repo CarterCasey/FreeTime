@@ -1,0 +1,23 @@
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial;
+	font-size: 14px;
+	padding: 24px;
+	margin: 0;
+}
+
+paper-shadow {
+	width: 300px;
+}
+
+paper-item div {
+	/*display: inline;*/
+	width: auto;
+}
+
+#cal-name {
+	float: left;
+}
+
+#add-button {
+	float: right;
+}
