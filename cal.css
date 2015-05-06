@@ -10,6 +10,10 @@ body {
 	width: auto;
 }
 
+paper-button:hover, paper-item:hover {
+	background-color: #EEE;
+}
+
 #auth-button div {
 	display: inline;
 	padding: 10px;
