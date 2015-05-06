@@ -13,15 +13,19 @@
 	<link rel="import" href="bower_components/polymer/polymer.html"/>
 	<link href="bower_components/paper-shadow/paper-shadow.html" rel="import"/>
 	<link href="bower_components/paper-item/paper-item.html" rel="import"/>
+	<link href="bower_components/paper-button/paper-button.html" rel="import"/>
 	
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
-
 
 </head>
 <body>
 	<h1>Your Calendars</h1>
 	
-	<div id="auth-button"></div>
+	<paper-shadow id="auth-button">
+		<div>Authorize access to calendars?</div>
+		<paper-button onclick="handleAuthClick(event)">OK</paper-button>
+	</paper-shadow>
+
 	<div id="calendar-list">
 		<paper-shadow></paper-shadow>
 	</div>

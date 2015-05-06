@@ -5,14 +5,23 @@ body {
 	margin: 0;
 }
 
+#auth-button {
+	display: none;
+	width: auto;
+}
+
+#auth-button div {
+	display: inline;
+	padding: 10px;
+}
+
 paper-shadow {
 	width: 300px;
 }
 
-paper-item div {
-	/*display: inline;*/
+/*paper-item div {
 	width: auto;
-}
+}*/
 
 #cal-name {
 	float: left;
