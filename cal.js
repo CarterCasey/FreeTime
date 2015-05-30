@@ -20,7 +20,7 @@ function start() {
 
 		for (i in cal_types) { var type = cal_types[i];
 			var cals = "\n\t\t<h3>" + CAL_ACCESS[type]
-					 + "</h3>\n\t\t<paper-shadow>";
+					 + ":</h3>\n\t\t<paper-shadow>";
 			for (j in paritioned[type]) { var cal = paritioned[type][j];
 				cals += makeCalItem(cal);
 			}

@@ -4,18 +4,13 @@
 	<title>Your Calendars</title>
 	<meta charset="utf-8"/>
 	
-	<!-- My files -->
 	<link rel="stylesheet" type="text/css" href="cal.css"/>
 	<!-- <link rel="icon" type="image/ico" href="favicon.ico"/> -->
-	<script src="auth.js"></script>
-	<script src="cal.js"></script>
 
 	<link rel="import" href="bower_components/polymer/polymer.html"/>
 	<link href="bower_components/paper-shadow/paper-shadow.html" rel="import"/>
 	<link href="bower_components/paper-item/paper-item.html" rel="import"/>
 	<link href="bower_components/paper-button/paper-button.html" rel="import"/>
-	
-	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 
 </head>
 <body>
@@ -27,6 +22,14 @@
 	</paper-shadow>
 
 	<div id="calendar-list"></div>
+
+	<!-- I've been told to load all my scripts in the body -->
+	
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+	<script src="auth.js"></script>
+	<script src="cal.js"></script>
+
 	<script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
 </body>
 </html>
