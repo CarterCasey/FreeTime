@@ -1,7 +1,9 @@
 # FreeTime
 
-## Plans
+## The Idea
 
-So far there's not much going on with this app, as you'd be able to see immediately upon loading cartercasey.com/freetime and poking around. After I'm done at athena, I hope to put some effort into making this a real, usable product.  
+[Kumar](http://kumarramanathan.com) deserves the credit for coming up with the idea behind this project. If you ever looked at our google calendars side-by-side, I think you'd realize why he's the one who came up with it, and not me.  
 
-Hopefully [Kumar](https://kumarramanathan.com) will be helping me out along the way.  
+## Plans for the Future
+
+So far there's not much going on with this app, as you can see from the current test version of [the site](http://cartercasey.com/freetime) and poking around. After I'm done at [athenahealth](http://athenahealth.com), I hope to put some effort into making this a real, usable product.  
